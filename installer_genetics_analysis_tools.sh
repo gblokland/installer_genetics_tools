@@ -193,8 +193,11 @@ ln -s gctb_2.5.2_Linux/gctb gctb
 mkdir -p gctb_refs && cd gctb_refs
 
 #Functional genomic annotations:
-wget https://plot.cnsgenomics.com/SBayesRC/Annotation/annot_baseline2.2.zip
+#wget https://plot.cnsgenomics.com/SBayesRC/Annotation/annot_baseline2.2.zip
+wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/Annotation/annot_baseline2.2.zip
 unzip annot_baseline2.2.zip && mv annot_baseline2.2.zip ../zips/ 
+wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/GWFM/Annotation/annot_baseline2.2_13M.zip
+unzip annot_baseline2.2_13M.zip && mv annot_baseline2.2_13M.zip ../zips/ 
 
 #https://github.com/zhilizheng/SBayesRC
 #LD reference: 
