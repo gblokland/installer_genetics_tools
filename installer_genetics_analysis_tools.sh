@@ -205,25 +205,18 @@ unzip annot_baseline2.2_13M.zip && mv annot_baseline2.2_13M.zip zips/
 #We suggest to download imputed LD same ancestry as the GWAS summary data.
 
 mkdir LD_Reference && cd LD_Reference
-#wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbEUR_Imputed.zip
-wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEUR_Imputed.zip
-#wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbEAS_Imputed.zip
-wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEAS_Imputed.zip
-#wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbAFR_Imputed.zip
-wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbAFR_Imputed.zip
-#wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbEUR_HM3.zip
-wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbEUR_HM3.zip
-#wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbEAS_HM3.zip
-wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbEAS_HM3.zip
-#wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbAFR_HM3.zip
-wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbAFR_HM3.zip
-
-unzip ukbEUR_Imputed.zip
-unzip ukbEAS_Imputed.zip
-unzip ukbAFR_Imputed.zip
-unzip ukbEUR_HM3.zip
-unzip ukbEAS_HM3.zip
-unzip ukbAFR_HM3.zip
+###wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbEUR_Imputed.zip
+wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEUR_Imputed.zip && unzip ukbEUR_Imputed.zip
+###wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbEAS_Imputed.zip
+#wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEAS_Imputed.zip && unzip ukbEAS_Imputed.zip
+###wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbAFR_Imputed.zip
+#wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbAFR_Imputed.zip && unzip ukbAFR_Imputed.zip
+###wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbEUR_HM3.zip
+wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbEUR_HM3.zip && unzip ukbEUR_HM3.zip
+###wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbEAS_HM3.zip
+#wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbEAS_HM3.zip && unzip ukbEAS_HM3.zip
+###wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbAFR_HM3.zip
+#wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbAFR_HM3.zip && unzip ukbAFR_HM3.zip
 
 # ***** primus *****
 wget https://primus.gs.washington.edu/docroot/versions/PRIMUS_v1.9.0.tgz
