@@ -1,59 +1,4 @@
 #!/bin/bash
-Rscript -e 'install.packages(c("devtools", "remotes", "RcppEigen"), repos = "http://cran.rstudio.com/")'
-Rscript -e 'install.packages("tidyverse", dependencies = TRUE, repos = "http://cran.rstudio.com/")'
-Rscript -e 'install.packages("units", dependencies = TRUE, repos = "http://cran.rstudio.com/")'
-Rscript -e 'install.packages(c("RSQLite","dbplyr","ggplot2"), dependencies = TRUE, repos = "http://cran.rstudio.com/")'
-
-Rscript -e 'dir.create(Sys.getenv("R_LIBS_USER"), recursive = TRUE)' && \
-Rscript -e '.libPaths(Sys.getenv("R_LIBS_USER"))' && \
-Rscript -e 'install.packages("BiocManager", repos="https://cloud.r-project.org")' && \
-Rscript -e "BiocManager::install('AnnotationDbi')" && \
-Rscript -e "BiocManager::install('biomaRt')" && \
-Rscript -e "BiocManager::install('org.Hs.eg.db')" && \
-Rscript -e "BiocManager::install('Rgraphviz')" && \
-Rscript -e "BiocManager::install('RBGL')" && \
-#Standard packages
-Rscript -e "install.packages(c('bigsnpr', 'corrgram', 'corrplot', 'cowplot', 'd3heatmap', 'data.table', 'DescTools', 'pbkrtest', 'doBy'), repos='http://cran.rstudio.com/')" && \
-Rscript -e "install.packages(c('dplyr', 'extrafont', 'extrafontdb', 'foreign', 'forestplot', 'forestploter'), repos='http://cran.rstudio.com/')" && \
-Rscript -e "install.packages(c('randomForest', 'RColorBrewer', 'readxl', 'reshape', 'reshape2'), repos='http://cran.rstudio.com/')" && \
-Rscript -e "install.packages(c('gdata', 'ggcorrplot', 'ggplot2', 'ggstats', 'gtools', 'gwasrapidd', 'haven', 'igraph', 'jpeg', 'lattice'), repos='http://cran.rstudio.com/')" && \
-Rscript -e "install.packages(c('lubridate', 'meta', 'metafor', 'MetaSKAT', 'rpf', 'OpenMx', 'pheatmap', 'plyr', 'png', 'poolr', 'psych'), repos='http://cran.rstudio.com/')" && \
-Rscript -e "install.packages(c('rmarkdown', 'scatterplot3d', 'scales', 'sem', 'semTools', 'stringr'), repos='http://cran.rstudio.com/')" && \
-Rscript -e "install.packages(c('sysfonts', 'systemfonts', 'tibble', 'tidyr', 'ukbtools', 'VennDiagram'), repos='http://cran.rstudio.com/')" && \
-Rscript -e "install.packages(c('viridis', 'viridisLite', 'vroom', 'writexl', 'WriteXLS', 'xtable'), repos='http://cran.rstudio.com/')" && \
-Rscript -e "install.packages(c('mvoutlier', 'qqman', 'rsq', 'xlsx', 'xlsxjars'), repos='http://cran.rstudio.com/')"
-    
-Rscript -e 'dir.create(Sys.getenv("R_LIBS_USER"), recursive = TRUE)' && \
-Rscript -e '.libPaths(Sys.getenv("R_LIBS_USER"))' && \
-#Bioconductor packages
-Rscript -e "BiocManager::install('ASSET')" && \
-Rscript -e "BiocManager::install('gwascat')" && \
-Rscript -e "BiocManager::install('snpStats')" && \
-#install snpStats first otherwise LAVA install won't work: dependency ‘snpStats’ is not available for package ‘LAVA’
-#GitHub packages
-Sys.unsetenv("GITHUB_PAT")
-Rscript -e "remotes::install_github('kenhanscombe/ukbtools', 'ramiromagno/gwasrapidd', 'privefl/bigsnpr', 'leeshawn/MetaSKAT', 'ozancinar/poolR'))" && \
-#ukbtools gwasrapidd bigsnpr MetaSKAT poolR are now on cran so they get installed with standard packages
-Rscript -e "remotes::install_github('DudbridgeLab/avengeme')" && \
-#AVENGEME is a package for polygenic scoring analysis
-Rscript -e "remotes::install_github('https://github.com/GenABEL-Project/GenABEL.git')" && \
-Rscript -e "remotes::install_github('MathiasHarrer/dmetar')" && \
-Rscript -e "remotes::install_github('kassambara/easyGgplot2')" && \
-Rscript -e "remotes::install_github('https://github.com/josefin-werme/LAVA.git')" && \
-setRepositories(ind = 1:6)
-Rscript -e "remotes::install_github('weizhouUMICH/SAIGE')" && \
-#SAIGE is an R package with Scalable and Accurate Implementation of Generalized mixed model.
-Rscript -e "remotes::install_github('merns/postgwas')" && \
-Rscript -e "remotes::install_github('MRCIEU/TwoSampleMR')"
-
-# Suggest: enable faster backend BLAS for R, e.g. openBlas, MKL
-# Run in R to install dependencies
-Rscript -e "install.packages(c('Rcpp', 'data.table', 'stringi', 'BH', 'RcppEigen'))"
-# Install SBayesRC package
-Rscript -e "install.packages('https://github.com/zhilizheng/SBayesRC/releases/download/v0.2.1/SBayesRC_0.2.1.tar.gz', repos=NULL, type='source')"
-
-Rscript -e "installed.packages(); .libPaths(); .libPaths( c( .libPaths(), '/ricopili/dependencies/R_packages', '/usr/local/lib/R/site-library') )"
-    
 #bin_dir=/ricopili/dependencies/
 bin_dir=~/persistent/opt/
 
@@ -301,3 +246,58 @@ mv fcgene_dynamic fcgene
 
 mkdir -p zips
 
+Rscript -e 'install.packages(c("devtools", "remotes", "RcppEigen"), repos = "http://cran.rstudio.com/")'
+Rscript -e 'install.packages("tidyverse", dependencies = TRUE, repos = "http://cran.rstudio.com/")'
+Rscript -e 'install.packages("units", dependencies = TRUE, repos = "http://cran.rstudio.com/")'
+Rscript -e 'install.packages(c("RSQLite","dbplyr","ggplot2"), dependencies = TRUE, repos = "http://cran.rstudio.com/")'
+
+Rscript -e 'dir.create(Sys.getenv("R_LIBS_USER"), recursive = TRUE)' && \
+Rscript -e '.libPaths(Sys.getenv("R_LIBS_USER"))' && \
+Rscript -e 'install.packages("BiocManager", repos="https://cloud.r-project.org")' && \
+Rscript -e "BiocManager::install('AnnotationDbi')" && \
+Rscript -e "BiocManager::install('biomaRt')" && \
+Rscript -e "BiocManager::install('org.Hs.eg.db')" && \
+Rscript -e "BiocManager::install('Rgraphviz')" && \
+Rscript -e "BiocManager::install('RBGL')" && \
+#Standard packages
+Rscript -e "install.packages(c('bigsnpr', 'corrgram', 'corrplot', 'cowplot', 'd3heatmap', 'data.table', 'DescTools', 'pbkrtest', 'doBy'), repos='http://cran.rstudio.com/')" && \
+Rscript -e "install.packages(c('dplyr', 'extrafont', 'extrafontdb', 'foreign', 'forestplot', 'forestploter'), repos='http://cran.rstudio.com/')" && \
+Rscript -e "install.packages(c('randomForest', 'RColorBrewer', 'readxl', 'reshape', 'reshape2'), repos='http://cran.rstudio.com/')" && \
+Rscript -e "install.packages(c('gdata', 'ggcorrplot', 'ggplot2', 'ggstats', 'gtools', 'gwasrapidd', 'haven', 'igraph', 'jpeg', 'lattice'), repos='http://cran.rstudio.com/')" && \
+Rscript -e "install.packages(c('lubridate', 'meta', 'metafor', 'MetaSKAT', 'rpf', 'OpenMx', 'pheatmap', 'plyr', 'png', 'poolr', 'psych'), repos='http://cran.rstudio.com/')" && \
+Rscript -e "install.packages(c('rmarkdown', 'scatterplot3d', 'scales', 'sem', 'semTools', 'stringr'), repos='http://cran.rstudio.com/')" && \
+Rscript -e "install.packages(c('sysfonts', 'systemfonts', 'tibble', 'tidyr', 'ukbtools', 'VennDiagram'), repos='http://cran.rstudio.com/')" && \
+Rscript -e "install.packages(c('viridis', 'viridisLite', 'vroom', 'writexl', 'WriteXLS', 'xtable'), repos='http://cran.rstudio.com/')" && \
+Rscript -e "install.packages(c('mvoutlier', 'qqman', 'rsq', 'xlsx', 'xlsxjars'), repos='http://cran.rstudio.com/')"
+    
+Rscript -e 'dir.create(Sys.getenv("R_LIBS_USER"), recursive = TRUE)' && \
+Rscript -e '.libPaths(Sys.getenv("R_LIBS_USER"))' && \
+#Bioconductor packages
+Rscript -e "BiocManager::install('ASSET')" && \
+Rscript -e "BiocManager::install('gwascat')" && \
+Rscript -e "BiocManager::install('snpStats')" && \
+#install snpStats first otherwise LAVA install won't work: dependency ‘snpStats’ is not available for package ‘LAVA’
+#GitHub packages
+Sys.unsetenv("GITHUB_PAT")
+Rscript -e "remotes::install_github('kenhanscombe/ukbtools', 'ramiromagno/gwasrapidd', 'privefl/bigsnpr', 'leeshawn/MetaSKAT', 'ozancinar/poolR'))" && \
+#ukbtools gwasrapidd bigsnpr MetaSKAT poolR are now on cran so they get installed with standard packages
+Rscript -e "remotes::install_github('DudbridgeLab/avengeme')" && \
+#AVENGEME is a package for polygenic scoring analysis
+Rscript -e "remotes::install_github('https://github.com/GenABEL-Project/GenABEL.git')" && \
+Rscript -e "remotes::install_github('MathiasHarrer/dmetar')" && \
+Rscript -e "remotes::install_github('kassambara/easyGgplot2')" && \
+Rscript -e "remotes::install_github('https://github.com/josefin-werme/LAVA.git')" && \
+setRepositories(ind = 1:6)
+Rscript -e "remotes::install_github('weizhouUMICH/SAIGE')" && \
+#SAIGE is an R package with Scalable and Accurate Implementation of Generalized mixed model.
+Rscript -e "remotes::install_github('merns/postgwas')" && \
+Rscript -e "remotes::install_github('MRCIEU/TwoSampleMR')"
+
+# Suggest: enable faster backend BLAS for R, e.g. openBlas, MKL
+# Run in R to install dependencies
+Rscript -e "install.packages(c('Rcpp', 'data.table', 'stringi', 'BH', 'RcppEigen'))"
+# Install SBayesRC package
+Rscript -e "install.packages('https://github.com/zhilizheng/SBayesRC/releases/download/v0.2.1/SBayesRC_0.2.1.tar.gz', repos=NULL, type='source')"
+
+Rscript -e "installed.packages(); .libPaths(); .libPaths( c( .libPaths(), '/ricopili/dependencies/R_packages', '/usr/local/lib/R/site-library') )"
+    
