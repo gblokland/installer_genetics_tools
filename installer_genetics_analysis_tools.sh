@@ -1,5 +1,6 @@
 #!/bin/bash
 #bin_dir=/ricopili/dependencies/
+#bin_dir=/notebooks/dms-gwas/opt/
 bin_dir=~/persistent/opt/
 
 #cd ~/notebooks/dms-gwas/opt
@@ -176,12 +177,6 @@ mv PRScs_refs/hhuang/public/PRS-CSx/Reference PRScs/
 rm -r PRScs_refs
 ln -s PRScs/PRScs.py PRScs.py
 
-#!/bin/bash
-
-#bin_dir=/notebooks/dms-gwas/opt/
-bin_dir=~/persistent/opt/
-cd $bin_dir 
-
 # ***** #GCTB containing SBayesR, SBayesRC, and SBayesS modules *****
 wget https://cnsgenomics.com/software/gctb/download/gctb_2.05beta_Linux.zip
 unzip gctb_2.05beta_Linux.zip && mv gctb_2.05beta_Linux.zip zips/
@@ -220,18 +215,10 @@ unzip ukbEUR_HM3.zip
 unzip ukbEAS_HM3.zip
 unzip ukbAFR_HM3.zip
 
-#cd ~/opt
-bin_dir=~/persistent/opt/
-cd $bin_dir 
-
 # ***** primus *****
 wget https://primus.gs.washington.edu/docroot/versions/PRIMUS_v1.9.0.tgz
 tar xzf PRIMUS_v1.9.0.tgz
 mv PRIMUS_v1.9.0.tgz zips/
-
-#cd ~/opt
-bin_dir=~/persistent/opt/
-cd $bin_dir 
 
 # ***** fcgene *****
 #https://sourceforge.net/projects/fcgene/files/latest/download
