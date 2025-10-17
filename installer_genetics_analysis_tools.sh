@@ -5,6 +5,7 @@ bin_dir=~/persistent/opt/
 
 #cd ~/notebooks/dms-gwas/opt
 cd $bin_dir
+mkdir -p zips
 
 wget https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20220402.zip
 unzip plink_linux_x86_64_20220402.zip
@@ -218,7 +219,6 @@ unzip ukbAFR_HM3.zip
 # ***** primus *****
 wget https://primus.gs.washington.edu/docroot/versions/PRIMUS_v1.9.0.tgz
 tar xzf PRIMUS_v1.9.0.tgz
-mv PRIMUS_v1.9.0.tgz zips/
 
 # ***** fcgene *****
 #https://sourceforge.net/projects/fcgene/files/latest/download
@@ -231,7 +231,9 @@ mv fcgene_static fcgene
 # For the dynamic version, run:
 mv fcgene_dynamic fcgene  
 
-mkdir -p zips
+cd $bin_dir
+mv *gz zips/
+mv *zip zips/
 
 Rscript -e 'install.packages(c("devtools", "remotes", "RcppEigen"), repos = "http://cran.rstudio.com/")'
 Rscript -e 'install.packages("tidyverse", dependencies = TRUE, repos = "http://cran.rstudio.com/")'
