@@ -1,0 +1,12 @@
+scipy
+numpy
+pandas
+matplotlib
+scikit-learn
+seaborn
+requests
+flask
+django
+jupyterlab
+datashader
+statsmodels
