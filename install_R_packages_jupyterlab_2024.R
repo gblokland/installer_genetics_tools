@@ -6,39 +6,37 @@ options('repos')
 #setwd("~/code/R_packages")
 setwd("/root/persistent/code/R_packages")
 if (!require("calibrate", character.only = TRUE, quietly = TRUE)){
-  #install.packages("calibrate", quiet = F)
+  install.packages("calibrate", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/calibrate/calibrate_1.7.2.tar.gz")
-  install.packages("calibrate_1.7.2.tar.gz", repos=NULL, quiet = F)
+  #install.packages("calibrate_1.7.2.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(calibrate))
 }
 
 if (!require("rlang", character.only = TRUE, quietly = TRUE)){
-  #install.packages("rlang", quiet = F)
+  install.packages("rlang", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/rlang/rlang_1.0.6.tar.gz")
-  install.packages("rlang_1.0.6.tar.gz", repos=NULL, quiet = F)
+  #install.packages("rlang_1.0.6.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(rlang))
 }
 
 if (!require("glue", character.only = TRUE, quietly = TRUE)){
-  #install.packages("glue", quiet = F)
-  #system("wget https://cran.r-project.org/src/contrib/Archive/glue/glue_1.3.1.tar.gz")
-  #install.packages("glue_1.3.1.tar.gz", repos=NULL, quiet = F)
+  install.packages("glue", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/glue/glue_1.3.2.tar.gz")
-  install.packages("glue_1.3.2.tar.gz", repos=NULL, quiet = F)
+  #install.packages("glue_1.3.2.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(glue))
 }
 
 if (!require("lifecycle", character.only = TRUE, quietly = TRUE)){
-  #install.packages("lifecycle", quiet = F)
+  install.packages("lifecycle", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/lifecycle/lifecycle_1.0.0.tar.gz")
-  install.packages("lifecycle_1.0.0.tar.gz", repos=NULL, quiet = F)
+  #install.packages("lifecycle_1.0.0.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(lifecycle))
 }
 
 if (!require("foreign", character.only = TRUE, quietly = TRUE)){
-  #install.packages("foreign", quiet = F)
+  install.packages("foreign", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/foreign/foreign_0.8-70.tar.gz")
-  install.packages("foreign_0.8-70.tar.gz", repos=NULL, quiet = F)
+  #install.packages("foreign_0.8-70.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(foreign))
 }
 
@@ -63,39 +61,37 @@ if (!require("gdata", character.only = TRUE, quietly = TRUE)){
 }
 
 if (!require("crayon", character.only = TRUE, quietly = TRUE)){
-  #install.packages("crayon", quiet = F)
+  install.packages("crayon", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/crayon/crayon_1.5.0.tar.gz")
-  install.packages("crayon_1.5.0.tar.gz", repos=NULL, quiet = F)
+  #install.packages("crayon_1.5.0.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(crayon))
 }
 
 if (!require("assertthat", character.only = TRUE, quietly = TRUE)){
-  #install.packages("assertthat", quiet = F)
+  install.packages("assertthat", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/assertthat_0.2.1.tar.gz")
-  install.packages("assertthat_0.2.1.tar.gz", repos=NULL, quiet = F)
+  #install.packages("assertthat_0.2.1.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(assertthat))
 }
 
 if (!require("cli", character.only = TRUE, quietly = TRUE)){
-  #install.packages("cli", quiet = F)
-  #system("wget https://cran.r-project.org/src/contrib/Archive/cli/cli_1.1.0.tar.gz")
-  #system("wget https://cran.r-project.org/src/contrib/Archive/cli/cli_2.3.0.tar.gz")
+  install.packages("cli", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/cli/cli_3.0.0.tar.gz")
-  install.packages("cli_3.0.0.tar.gz", repos=NULL, quiet = F)
+  #install.packages("cli_3.0.0.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(cli))
 }
 
 if (!require("vctrs", character.only = TRUE, quietly = TRUE)){
-  #install.packages("vctrs", quiet = F)
+  install.packages("vctrs", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/vctrs/vctrs_0.5.0.tar.gz")
-  install.packages("vctrs_0.5.0.tar.gz", repos=NULL, quiet = F)
+  #install.packages("vctrs_0.5.0.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(vctrs))
 }
 
 if (!require("gtable", character.only = TRUE, quietly = TRUE)){
-  #install.packages("gtable", quiet = F)
+  install.packages("gtable", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/gtable/gtable_0.3.0.tar.gz")
-  install.packages("gtable_0.3.0.tar.gz", repos=NULL, quiet = F)
+  #install.packages("gtable_0.3.0.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(gtable))
 }
 if (!require("lazyeval", character.only = TRUE, quietly = TRUE)){
@@ -114,9 +110,9 @@ if (!require("stringi", character.only = TRUE, quietly = TRUE)){
 }
 
 if (!require("stringr", character.only = TRUE, quietly = TRUE)){
-  #install.packages("stringr", quiet = F)
+  install.packages("stringr", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/stringr/stringr_1.4.0.tar.gz")
-  install.packages("stringr_1.4.0.tar.gz", repos=NULL, quiet = F)
+  #install.packages("stringr_1.4.0.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(stringr))
 }
 if (!require("reshape2", character.only = TRUE, quietly = TRUE)){
@@ -129,15 +125,15 @@ if (!require("fansi", character.only = TRUE, quietly = TRUE)){
   suppressMessages(library(fansi))
 }
 if (!require("utf8", character.only = TRUE, quietly = TRUE)){
-  #install.packages("utf8", quiet = F)
+  install.packages("utf8", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/utf8/utf8_1.2.2.tar.gz")
-  install.packages("utf8_1.2.2.tar.gz", repos=NULL, quiet = F)
+  #install.packages("utf8_1.2.2.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(utf8))
 }
 if (!require("pillar", character.only = TRUE, quietly = TRUE)){
-  #install.packages("pillar", quiet = F)
+  install.packages("pillar", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/pillar/pillar_1.8.1.tar.gz")
-  install.packages("pillar_1.8.1.tar.gz", repos=NULL, quiet = F)
+  #install.packages("pillar_1.8.1.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(pillar))
 }
 if (!require("pkgconfig", character.only = TRUE, quietly = TRUE)){
@@ -146,9 +142,9 @@ if (!require("pkgconfig", character.only = TRUE, quietly = TRUE)){
 }
 
 if (!require("tibble", character.only = TRUE, quietly = TRUE)){
-  #install.packages("tibble", quiet = F)
+  install.packages("tibble", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/tibble/tibble_2.1.3.tar.gz")
-  install.packages("tibble_2.1.3.tar.gz", repos=NULL, quiet = F)
+  #install.packages("tibble_2.1.3.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(tibble))
 }
 
@@ -173,21 +169,21 @@ if (!require("viridisLite", character.only = TRUE, quietly = TRUE)){
 }
 
 if (!require("R6", character.only = TRUE, quietly = TRUE)){
-  #install.packages("R6", quiet = F)
+  install.packages("R6", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/R6/R6_2.5.0.tar.gz")
-  install.packages("R6_2.5.0.tar.gz", repos=NULL, quiet = F)
+  #install.packages("R6_2.5.0.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(R6))
 }
 if (!require("scales", character.only = TRUE, quietly = TRUE)){
-  #install.packages("scales", quiet = F)
+  install.packages("scales", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/scales/scales_1.2.1.tar.gz")
-  install.packages("scales_1.2.1.tar.gz", repos=NULL, quiet = F)
+  #install.packages("scales_1.2.1.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(scales))
 }
 if (!require("withr", character.only = TRUE, quietly = TRUE)){
-  #install.packages("withr", quiet = F)
+  install.packages("withr", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/withr/withr_2.5.2.tar.gz")
-  install.packages("withr_2.5.2.tar.gz", repos=NULL, quiet = F)
+  #install.packages("withr_2.5.2.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(withr))
 }
 if (!require("digest", character.only = TRUE, quietly = TRUE)){
@@ -196,9 +192,9 @@ if (!require("digest", character.only = TRUE, quietly = TRUE)){
 }
 
 if (!require("ggplot2", character.only = TRUE, quietly = TRUE)){
-  #install.packages('ggplot2', quiet = F)
+  install.packages('ggplot2', quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/ggplot2/ggplot2_3.2.0.tar.gz")
-  install.packages("ggplot2_3.2.0.tar.gz", repos=NULL, quiet = F)
+  #install.packages("ggplot2_3.2.0.tar.gz", repos=NULL, quiet = F)
   suppressMessages(library(ggplot2))
 }
 
@@ -212,13 +208,14 @@ if (!require("plyr", character.only = TRUE, quietly = TRUE)){
   suppressMessages(library(plyr))
 }
 if (!require("dplyr", character.only = TRUE, quietly = TRUE)){
+  install.packages("dplyr", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/dplyr/dplyr_1.0.6.tar.gz")
-  install.packages("generics", quiet = F)
+  #install.packages("generics", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/ellipsis/ellipsis_0.0.1.tar.gz")
-  install.packages("ellipsis_0.0.1.tar.gz", repos=NULL, quiet = F)
-  install.packages("tidyselect", quiet = F)
+  #install.packages("ellipsis_0.0.1.tar.gz", repos=NULL, quiet = F)
+  #install.packages("tidyselect", quiet = F)
   #install.packages("glue")
-  install.packages('dplyr_1.0.6.tar.gz', repos=NULL, dependencies=T, quiet = F)
+  #install.packages('dplyr_1.0.6.tar.gz', repos=NULL, dependencies=T, quiet = F)
   suppressMessages(library(dplyr))
 }
 
@@ -228,8 +225,9 @@ if (!require("getopt", character.only = TRUE, quietly = TRUE)){
 }
 
 if (!require("optparse", character.only = TRUE, quietly = TRUE)){
+  install.packages("optparse", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/optparse/optparse_1.6.4.tar.gz")
-  install.packages("optparse_1.6.4.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("optparse_1.6.4.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(optparse))
 }
 
@@ -239,64 +237,64 @@ if (!require("psych", character.only = TRUE, quietly = TRUE)){
 }
 
 if (!require("crayon", character.only = TRUE, quietly = TRUE)){
-  #install.packages("crayon", quiet = F)
+  install.packages("crayon", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/crayon/crayon_1.5.0.tar.gz")
-  install.packages("crayon_1.5.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("crayon_1.5.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(crayon))
 }
 
 if (!require("cpp11", character.only = TRUE, quietly = TRUE)){
-  #install.packages("cpp11", quiet = F)
+  install.packages("cpp11", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/cpp11/cpp11_0.4.3.tar.gz")
-  install.packages("cpp11_0.4.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("cpp11_0.4.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(cpp11))
 }
 if (!require("bit", character.only = TRUE, quietly = TRUE)){
-  #install.packages("bit", quiet = F)
+  install.packages("bit", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/bit/bit_1.1-14.tar.gz")
-  install.packages("bit_1.1-14.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("bit_1.1-14.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(bit))
 }
 if (!require("bit64", character.only = TRUE, quietly = TRUE)){
-  #install.packages("bit64", quiet = F)
+  install.packages("bit64", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/bit64/bit64_0.9-7.tar.gz")
-  install.packages("bit64_0.9-7.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("bit64_0.9-7.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(bit64))
 }
 if (!require("hms", character.only = TRUE, quietly = TRUE)){
-  #install.packages("hms", quiet = F)
+  install.packages("hms", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/hms/hms_0.4.2.tar.gz")
-  install.packages("hms_0.4.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("hms_0.4.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(hms))
 }
 if (!require("tzdb", character.only = TRUE, quietly = TRUE)){
-  #install.packages("tzdb", quiet = F)
+  install.packages("tzdb", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/tzdb/tzdb_0.1.1.tar.gz")
-  install.packages("tzdb_0.1.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("tzdb_0.1.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(tzdb))
 }
 if (!require("assertthat", character.only = TRUE, quietly = TRUE)){
-  #install.packages("assertthat", quiet = F)
+  install.packages("assertthat", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/assertthat/assertthat_0.2.0.tar.gz")
-  install.packages("assertthat_0.2.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("assertthat_0.2.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(assertthat))
 }
 if (!require("prettyunits", character.only = TRUE, quietly = TRUE)){
-  #install.packages("prettyunits", quiet = F)
+  install.packages("prettyunits", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/prettyunits/prettyunits_1.0.2.tar.gz")
-  install.packages("prettyunits_1.0.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("prettyunits_1.0.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(prettyunits))
 }
 if (!require("progress", character.only = TRUE, quietly = TRUE)){
-  #install.packages("progress", quiet = F)
+  install.packages("progress", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/progress/progress_1.2.1.tar.gz")
-  install.packages("progress_1.2.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("progress_1.2.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(progress))
 }
 if (!require("vroom", character.only = TRUE, quietly = TRUE)){
-  #install.packages("vroom", quiet = F)
+  install.packages("vroom", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/vroom/vroom_1.6.0.tar.gz")
-  install.packages("vroom_1.6.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("vroom_1.6.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(vroom))
 }
 if (!require("clipr", character.only = TRUE, quietly = TRUE)){
@@ -304,47 +302,51 @@ if (!require("clipr", character.only = TRUE, quietly = TRUE)){
   suppressMessages(library(clipr))
 }
 if (!require("readr", character.only = TRUE, quietly = TRUE)){
-  #install.packages("readr", quiet = F)
+  install.packages("readr", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/readr/readr_2.1.2.tar.gz")
-  install.packages("readr_2.1.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("readr_2.1.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(readr))
 }
 if (!require("forcats", character.only = TRUE, quietly = TRUE)){
-  #install.packages("forcats", quiet = F)
+  install.packages("forcats", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/forcats/forcats_0.4.0.tar.gz")
-  install.packages("forcats_0.4.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("forcats_0.4.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(forcats))
 }
 if (!require("haven", character.only = TRUE, quietly = TRUE)){
-  #install.packages("haven", quiet = F)
+  install.packages("haven", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/haven/haven_2.5.0.tar.gz")
-  install.packages("haven_2.5.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("haven_2.5.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(haven))
 }
 
 if (!require("remotes", character.only = TRUE, quietly = TRUE)){
-  #install.packages("remotes", quiet = F)
+  install.packages("remotes", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/remotes/remotes_2.4.2.tar.gz")
-  install.packages("remotes_2.4.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("remotes_2.4.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(remotes))
 }
 
 runif<-"FALSE"
 if (runif==TRUE) {
+  install.packages("evaluate", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/evaluate/evaluate_0.19.tar.gz")
-  install.packages("evaluate_0.19.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("evaluate_0.19.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  install.packages("highr", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/highr/highr_0.9.tar.gz")
-  install.packages("highr_0.9.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("highr_0.9.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  install.packages("xfun", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/xfun/xfun_0.39.tar.gz")
-  install.packages("xfun_0.39.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("xfun_0.39.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  install.packages("yaml", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/yaml/yaml_2.3.6.tar.gz")
-  install.packages("yaml_2.3.6.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("yaml_2.3.6.tar.gz", repos=NULL, dependencies = T, quiet = F)
 }
 
 if (!require("knitr", character.only = TRUE, quietly = TRUE)){
-  #install.packages("remotes", quiet = F)
+  install.packages("remotes", quiet = F)
   #system("wget https://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.45.tar.gz")
-  install.packages("knitr_1.45.tar.gz", repos=NULL, dependencies = T, quiet = F)
+  #install.packages("knitr_1.45.tar.gz", repos=NULL, dependencies = T, quiet = F)
   suppressMessages(library(remotes))
 }
 
