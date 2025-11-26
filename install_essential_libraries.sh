@@ -15,6 +15,19 @@ apt-get install -y python3-scipy python3-numpy python3-h5py
 
 cd /root/persistent/code
 
+echo "
+numpy
+pandas
+matplotlib
+scikit-learn
+seaborn
+requests
+flask
+django
+jupyterlab
+pysam
+" > python_requirements_shortlist.txt
+
 pip install -r python_requirements_shortlist.txt 
 
 Rscript install_R_packages_jupyterlab_2024.R
