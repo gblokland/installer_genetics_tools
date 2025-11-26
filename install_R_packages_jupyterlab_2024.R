@@ -1,9 +1,9 @@
-Show where libraries are located:
+#Show where libraries are located:
 .libPaths()
 .libPaths( c("/usr/lib/R/library", "/usr/local/lib/R/site-library", "/ricopili/dependencies/R_packages", .libPaths() ) )
 options('repos'="https://cran.rstudio.com/")
 options('repos')
-setwd("~/code/R_packages")
+#setwd("~/code/R_packages")
 setwd("/root/persistent/code/R_packages")
 
 install_from_cran <- TRUE
