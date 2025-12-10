@@ -15,15 +15,8 @@ echo "Using project directory: $PROJECTDIR"
 # Environment PATH configuration
 ############################################
 
-export PATH=/ricopili/dependencies/plink:$PATH
 export PATH=/opt:$PATH
 export PATH=/opt/generic-ChunkChromosome/ChunkChromosome:$PATH
-
-which plink
-which Rscript
-which ChunkChromosome
-which mach1
-which minimac
 
 # Colorize ls output
 alias ls='ls -FG --color'
@@ -61,6 +54,27 @@ export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit3:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit5:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
+
+which Rscript
+which ChunkChromosome
+which mach1
+which minimac3
+which minimac4
+which bcftools
+which bgzip
+which eagle
+which impute_v2
+which impute_v4
+which latex
+which liftover
+which metal
+which plink
+which plink2
+which minimac
+which shapeit
+which shapeit3
+which shapeit5
+which tabix
 
 ############################################
 # Symbolic links into $HOME
