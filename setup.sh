@@ -4,10 +4,12 @@
 # Parse working directory argument
 ############################################
 
-# Usage: setup.sh [WORKDIR]
-WORKDIR="${1:-/root/persistent}"
+# Usage: setup.sh [WORKFOLDER]
+WORKFOLDER="${1:-gam.blokland}"            # if no argument → default folder name
+PROJECTDIR="/root/persistent"
 
-echo "Using working directory: $WORKDIR"
+echo "Using working folder: $WORKFOLDER"
+echo "Using project directory: $PROJECTDIR"
 
 ############################################
 # Environment PATH configuration
@@ -28,16 +30,16 @@ alias ls='ls -FG --color'
 LS_COLORS="di=34:ln=36:so=35:pi=33:ex=32"
 export LS_COLORS
 
-# Make executables in WORKDIR/code and WORKDIR/opt findable
-if [[ $PATH != *"$WORKDIR/code"* ]]; then
-    export PATH="$WORKDIR/code:$PATH"
+# Make executables in PROJECTDIR/code and PROJECTDIR/opt findable
+if [[ $PATH != *"$PROJECTDIR/code"* ]]; then
+    export PATH="$PROJECTDIR/code:$PATH"
 fi
 
-if [[ $PATH != *"$WORKDIR/opt"* ]]; then
-    export PATH="$WORKDIR/opt:$PATH"
+if [[ $PATH != *"$PROJECTDIR/opt"* ]]; then
+    export PATH="$PROJECTDIR/opt:$PATH"
 fi
 
-export PATH="$WORKDIR/opt/annovar:$WORKDIR/opt/liftOverPlink:$WORKDIR/opt/locuszoom/bin:$PATH"
+export PATH="$PROJECTDIR/opt/annovar:$PROJECTDIR/opt/liftOverPlink:$PROJECTDIR/opt/locuszoom/bin:$PATH"
 
 # Add Ricopili tools
 export PATH=/ricopili/dependencies/Minimac3:/ricopili/dependencies/bcftools:/ricopili/dependencies/bgzip:/ricopili/dependencies/eagle:/ricopili/dependencies/eigensoft/EIG-6.1.4/bin:/ricopili/dependencies/impute_v2:/ricopili/dependencies/impute_v4:/ricopili/dependencies/latex:/ricopili/dependencies/ldsc:/ricopili/dependencies/liftover:/ricopili/dependencies/metal:/ricopili/dependencies/shapeit:/ricopili/dependencies/shapeit3:/ricopili/dependencies/tabix:$PATH
@@ -51,11 +53,11 @@ cd "$HOME"
 # Additional symlinks
 for d in code data opt ref_panels sumstats working; do
     if [ ! -L "$HOME/$d" ]; then
-        ln -s "$WORKDIR/$d" "$d"
+        ln -s "$PROJECTDIR/$d" "$d"
     fi
 done
 
 # User folder link
-if [ ! -L "$HOME/gam.blokland" ]; then
-    ln -s "$WORKDIR/working/gam.blokland" gam.blokland
+if [ ! -L "$HOME/$WORKFOLDER" ]; then
+    ln -s "$PROJECTDIR/working/$WORKFOLDER" $WORKFOLDER
 fi
