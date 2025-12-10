@@ -518,7 +518,7 @@ if (install_from_cran) {
   }
     suppressMessages(library(knitr))
 }
-
+}
 
 if (runif==TRUE) {
   if () {
