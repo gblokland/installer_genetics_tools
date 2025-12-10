@@ -233,6 +233,9 @@ mv fcgene_static fcgene
 # For the dynamic version, run:
 mv fcgene_dynamic fcgene  
 
+# ***** eigensoft *****
+
+
 cd $bin_dir
 mv *gz zips/
 mv *zip zips/
