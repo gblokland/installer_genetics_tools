@@ -494,80 +494,161 @@ if (install_from_cran) {
 
 runif<-"FALSE"
 if (runif==TRUE) {
+}
 if (install_from_cran) {
   install.packages("evaluate", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/evaluate/evaluate_0.19.tar.gz")
   install.packages("evaluate_0.19.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
   install.packages("highr", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/highr/highr_0.9.tar.gz")
   install.packages("highr_0.9.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
   install.packages("xfun", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/xfun/xfun_0.39.tar.gz")
   install.packages("xfun_0.39.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
   install.packages("yaml", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/yaml/yaml_2.3.6.tar.gz")
   install.packages("yaml_2.3.6.tar.gz", repos=NULL, dependencies = T, quiet = F)
 }
 
 if (!require("knitr", character.only = TRUE, quietly = TRUE)){
-if (install_from_cran) {
-  install.packages("knitr", quiet = F)
+    if (install_from_cran) {
+      install.packages("knitr", quiet = F)
     } else {
-  system("wget https://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.45.tar.gz")
-  install.packages("knitr_1.45.tar.gz", repos=NULL, dependencies = T, quiet = F)
-  }
+      system("wget https://cran.r-project.org/src/contrib/Archive/knitr/knitr_1.45.tar.gz")
+      install.packages("knitr_1.45.tar.gz", repos=NULL, dependencies = T, quiet = F)
+    }
     suppressMessages(library(knitr))
 }
-}
 
+}
 if (runif==TRUE) {
-  if () {
-    
-  } else {
+if (install_from_cran) {
+  install.packages("xml2", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/xml2/xml2_1.3.3.tar.gz")
   install.packages("xml2_1.3.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
-  system("wget https://cran.r-project.org/src/contrib/Archive/curl/curl_4.3.tar.gz")
+}
+if (install_from_cran) {
+  install.packages("curl", quiet = F)
+} else {
+    system("wget https://cran.r-project.org/src/contrib/Archive/curl/curl_4.3.tar.gz")
   install.packages("curl_4.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("httr", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/httr/httr_1.4.4.tar.gz")
   install.packages("httr_1.4.4.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("selectr", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/selectr/selectr_0.4-1.tar.gz")
   install.packages("selectr_0.4-1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("rvest", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/rvest/rvest_1.0.3.tar.gz")
   install.packages("rvest_1.0.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
-  
+}
+if (install_from_cran) {
+  install.packages("fs", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/fs/fs_1.5.2.tar.gz")
   install.packages("fs_1.5.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("sass", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/sass/sass_0.4.4.tar.gz")
   install.packages("sass_0.4.4.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("bslib", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/bslib/bslib_0.4.2.tar.gz")
   install.packages("bslib_0.4.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("rmarkdown", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/rmarkdown/rmarkdown_2.19.tar.gz")
   install.packages("rmarkdown_2.19.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("htmltools", quiet = F)
+} else {
   
   system("wget https://cran.r-project.org/src/contrib/Archive/htmltools/htmltools_0.5.4.tar.gz")
   install.packages("htmltools_0.5.4.tar.gz", repos=NULL, dependencies = T, quiet = F)
-  
+}
+if (install_from_cran) {
+  install.packages("rstudioapi", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/rstudioapi/rstudioapi_0.14.tar.gz")
   install.packages("rstudioapi_0.14.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("ps", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/ps/ps_1.7.2.tar.gz")
   install.packages("ps_1.7.2.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("processx", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/processx/processx_3.8.0.tar.gz")
   install.packages("processx_3.8.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("callr", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/callr/callr_3.7.3.tar.gz")
   install.packages("callr_3.7.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("webshot", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/webshot/webshot_0.5.4.tar.gz")
   install.packages("webshot_0.5.4.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("svglite", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/svglite/svglite_2.1.0.tar.gz")
   install.packages("svglite_2.1.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
-  
+}
+if (install_from_cran) {
+  install.packages("highr", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/highr/highr_0.9.tar.gz")
   install.packages("highr_0.9.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("xfun", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/xfun/xfun_0.39.tar.gz")
   install.packages("xfun_0.39.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("yaml", quiet = F)
+} else {
   system("wget https://cran.r-project.org/src/contrib/Archive/yaml/yaml_2.3.6.tar.gz")
   install.packages("yaml_2.3.6.tar.gz", repos=NULL, dependencies = T, quiet = F)
-  }
-  }
+}
+
+}
 
 if (!require("kableExtra", character.only = TRUE, quietly = TRUE)){
   #install.packages("kableExtra", quiet = F)
@@ -606,42 +687,87 @@ remotes::install_github('tidyverse/tibble')
 remotes::install_github('tidyverse/readr')
 
 if (runif==TRUE) {
-  if () {
-      } else {
   #Skipping 3 packages not available: cpp11, lifecycle, xml2
   #Installing 8 packages: sys, textshaping, askpass, zip, uuid, ragg, openssl, cli
+if (install_from_cran) {
+  install.packages("sys", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/sys_3.4.3.tar.gz")
   install.packages("sys_3.4.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
-  system("wget https://cran.rstudio.com/src/contrib/textshaping_0.4.1.tar.gz")
+}
+if (install_from_cran) {
+  install.packages("textshaping", quiet = F)
+} else {
+    system("wget https://cran.rstudio.com/src/contrib/textshaping_0.4.1.tar.gz")
   install.packages("textshaping_0.4.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("askpass", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/askpass_1.2.1.tar.gz")
   install.packages("askpass_1.2.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("zip", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/zip_2.3.1.tar.gz")
   install.packages("zip_2.3.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("uuid", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/uuid_1.2-1.tar.gz")
   install.packages("uuid_1.2-1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("ragg", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/ragg_1.3.3.tar.gz")
   install.packages("ragg_1.3.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("openssl", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/openssl_2.3.0.tar.gz")
   install.packages("openssl_2.3.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("cli", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/cli_3.6.3.tar.gz")
   install.packages("cli_3.6.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
-  Installing 4 packages: fontLiberation, fontBitstreamVera, htmltools, fontquiver
+  #Installing 4 packages: fontLiberation, fontBitstreamVera, htmltools, fontquiver
+}
+if (install_from_cran) {
+  install.packages("fontLiberation", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/fontLiberation_0.1.0.tar.gz")
   install.packages("fontLiberation_0.1.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("fontBitstreamVera", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/fontBitstreamVera_0.1.1.tar.gz")
   install.packages("fontBitstreamVera_0.1.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("htmltools", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/htmltools_0.5.8.1.tar.gz")
   install.packages("htmltools_0.5.8.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
+}
+if (install_from_cran) {
+  install.packages("fontquiver", quiet = F)
+} else {
   system("wget https://cran.rstudio.com/src/contrib/fontquiver_0.2.1.tar.gz")
   install.packages("fontquiver_0.2.1.tar.gz", repos=NULL, dependencies = T, quiet = F)
   }
     }
 
 if (!require("officer", character.only = TRUE, quietly = TRUE)){
-if (install_from_cran) {
+    if (install_from_cran) {
   remotes::install_github("davidgohel/officer")
-      } else {
+    } else {
   system("wget https://cran.r-project.org/src/contrib/Archive/officer/officer_0.5.0.tar.gz")
   install.packages("officer_0.5.0.tar.gz", repos=NULL, dependencies = T, quiet = F)
   }
@@ -650,7 +776,7 @@ if (install_from_cran) {
 if (!require("gdtools", character.only = TRUE, quietly = TRUE)){
 if (install_from_cran) {
   remotes::install_github("davidgohel/gdtools")
-      } else {
+    } else {
   system("wget https://cran.r-project.org/src/contrib/Archive/gdtools/gdtools_0.2.4.tar.gz")
   install.packages("gdtools_0.2.4.tar.gz", repos=NULL, dependencies = T, quiet = F)
   }
@@ -661,7 +787,7 @@ if (!require("flextable", character.only = TRUE, quietly = TRUE)){
 if (install_from_cran) {
   install.packages("flextable", quiet = F)
   remotes::install_github("davidgohel/flextable")
-      } else {
+    } else {
   system("wget https://cran.r-project.org/src/contrib/Archive/flextable/flextable_0.8.3.tar.gz")
   install.packages("flextable_0.8.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
   }
