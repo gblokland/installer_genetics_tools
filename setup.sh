@@ -35,6 +35,7 @@ fi
 export PATH="$PROJECTDIR/opt/annovar:$PROJECTDIR/opt/liftOverPlink:$PROJECTDIR/opt/locuszoom/bin:$PATH"
 
 # Add Ricopili tools
+ln -s /ricopili/dependencies/ricopili_dependencies_0225b/* /ricopili/dependencies/
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac3:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac4/minimac4-4.1.2-Linux-x86_64/bin:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bcftools/bcftools-1.9_bin:$PATH
