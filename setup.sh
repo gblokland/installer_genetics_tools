@@ -54,15 +54,12 @@ export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/latex:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/ldsc:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/liftover:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/metal:$PATH
+export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/perl_modules:$PATH
+export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/plink:$PATH
+export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/plink2:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit3:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
+export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit5:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
 
 ############################################
