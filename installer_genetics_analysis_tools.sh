@@ -234,7 +234,7 @@ mv fcgene_static fcgene
 mv fcgene_dynamic fcgene  
 
 # ***** eigensoft *****
-
+bash install_eigensoft.sh /ricopili/dependencies/eigensoft
 
 cd $bin_dir
 mv *gz zips/
