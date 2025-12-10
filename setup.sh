@@ -58,7 +58,6 @@ export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
 
 which Rscript
 which ChunkChromosome
-which mach1
 which Minimac3
 which minimac4
 which bcftools
@@ -71,9 +70,9 @@ which liftOver
 which metal
 which plink
 which plink2
-which minimac
-which shapeit
-which shapeit3
+which shapeit.v2.r837.linux.x86_64
+which shapeit3.r884.1
+which shapeit3.r884.2
 which shapeit5
 which tabix
 
