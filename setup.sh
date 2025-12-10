@@ -36,8 +36,8 @@ export PATH="$PROJECTDIR/opt/annovar:$PROJECTDIR/opt/liftOverPlink:$PROJECTDIR/o
 
 # Add Ricopili tools
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac3:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac4:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bcftools:$PATH
+export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac4/minimac4-4.1.2-Linux-x86_64/bin:$PATH
+export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bcftools/bcftools-1.9_bin:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bgzip:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/eagle:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/eigensoft/EIG-6.1.4/bin:$PATH
@@ -45,7 +45,8 @@ export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/impute_v2:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/impute_v4:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/latex:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/ldsc:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/liftover:$PATH
+export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/liftover/alternative_bins/v1:$PATH
+export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/liftover/alternative_bins/v2:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/metal:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/perl_modules:$PATH
 export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/plink:$PATH
@@ -58,7 +59,7 @@ export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
 which Rscript
 which ChunkChromosome
 which mach1
-which minimac3
+which Minimac3
 which minimac4
 which bcftools
 which bgzip
@@ -66,7 +67,7 @@ which eagle
 which impute_v2
 which impute_v4
 which latex
-which liftover
+which liftOver
 which metal
 which plink
 which plink2
