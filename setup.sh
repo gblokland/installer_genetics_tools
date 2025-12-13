@@ -15,49 +15,51 @@ echo "Using project directory: $PROJECTDIR"
 # Environment PATH configuration
 ############################################
 
-export PATH=/opt:$PATH
-export PATH=/opt/generic-ChunkChromosome/ChunkChromosome:$PATH
-export PATH="$HOME/miniconda3/bin:$PATH"
+echo "export PATH=/opt:\$PATH" > ~/.bashrc
+echo "export PATH=/opt/generic-ChunkChromosome/ChunkChromosome:\$PATH" >> ~/.bashrc
+echo "export PATH="$HOME/miniconda3/bin:\$PATH" >> ~/.bashrc
 
 # Colorize ls output
-alias ls='ls -FG --color'
-LS_COLORS="di=34:ln=36:so=35:pi=33:ex=32"
-export LS_COLORS
+echo "alias ls='ls -FG --color'" >> ~/.bashrc
+echo "LS_COLORS=\"di=34:ln=36:so=35:pi=33:ex=32\"" >> ~/.bashrc
+echo "export LS_COLORS" >> ~/.bashrc
 
 # Make executables in PROJECTDIR/code and PROJECTDIR/opt findable
 if [[ $PATH != *"$PROJECTDIR/code"* ]]; then
-    export PATH="$PROJECTDIR/code:$PATH"
+    export PATH=$PROJECTDIR/code:\$PATH" >> ~/.bashrc
 fi
 
 if [[ $PATH != *"$PROJECTDIR/opt"* ]]; then
-    export PATH="$PROJECTDIR/opt:$PATH"
+    export PATH=$PROJECTDIR/opt:\$PATH" >> ~/.bashrc
 fi
 
-export PATH="$PROJECTDIR/opt/annovar:$PROJECTDIR/opt/liftOverPlink:$PROJECTDIR/opt/locuszoom/bin:$PATH"
+echo "export PATH=$PROJECTDIR/opt/annovar:\$PATH" >> ~/.bashrc
+echo "export PATH=$PROJECTDIR/opt/liftOverPlink:\$PATH" >> ~/.bashrc
+echo "export PATH=$PROJECTDIR/opt/locuszoom/bin:\$PATH" >> ~/.bashrc
 
 # Add Ricopili tools
-ln -s /ricopili/dependencies/ricopili_dependencies_0225b/* /ricopili/dependencies/
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac3:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac4/minimac4-4.1.2-Linux-x86_64/bin:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bcftools/bcftools-1.9_bin:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bgzip:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/eagle:$PATH
-#export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/eigensoft/EIG-6.1.4/bin:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/eigensoft/bin:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/impute_v2:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/impute_v4:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/latex:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/ldsc:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/liftover/alternative_bins/v1:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/liftover/alternative_bins/v2:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/metal:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/perl_modules:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/plink:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/plink2:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit3:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit5:$PATH
-export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:$PATH
+echo "ln -s /ricopili/dependencies/ricopili_dependencies_0225b/* /ricopili/dependencies/" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac3:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac4/minimac4-4.1.2-Linux-x86_64/bin:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bcftools/bcftools-1.9_bin:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bgzip:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/eagle:\$PATH" >> ~/.bashrc
+#echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/eigensoft/EIG-6.1.4/bin:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/eigensoft/bin:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/impute_v2:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/impute_v4:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/latex:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/ldsc:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/liftover/alternative_bins/v1:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/liftover/alternative_bins/v2:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/metal:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/perl_modules:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/plink:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/plink2:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit3:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit5:\$PATH" >> ~/.bashrc
+echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:\$PATH" >> ~/.bashrc
 
 which Rscript
 which ChunkChromosome
