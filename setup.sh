@@ -22,7 +22,7 @@ echo "export PATH="$HOME/miniconda3/bin:\$PATH" >> ~/.bashrc
 # Colorize ls output
 echo "alias ls='ls -FG --color'" >> ~/.bashrc
 echo "LS_COLORS=\"di=34:ln=36:so=35:pi=33:ex=32\"" >> ~/.bashrc
-echo "export LS_COLORS" >> ~/.bashrc
+echo "export \$LS_COLORS" >> ~/.bashrc
 
 # Make executables in PROJECTDIR/code and PROJECTDIR/opt findable
 if [[ $PATH != *"$PROJECTDIR/code"* ]]; then
@@ -61,6 +61,8 @@ echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit3:\$
 echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/shapeit5:\$PATH" >> ~/.bashrc
 echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/tabix:\$PATH" >> ~/.bashrc
 
+source ~/.bashrc
+
 which Rscript
 which ChunkChromosome
 which Minimac3
@@ -85,16 +87,16 @@ which tabix
 # Symbolic links into $HOME
 ############################################
 
-cd "$HOME"
+cd $HOME
 
 # Additional symlinks
 for d in code data opt ref_panels sumstats working; do
-    if [ ! -L "$HOME/$d" ]; then
-        ln -s "$PROJECTDIR/$d" "$d"
+    if [ ! -L $HOME/$d ]; then
+        ln -s $PROJECTDIR/$d $d
     fi
 done
 
 # User folder link
-if [ ! -L "$HOME/$WORKFOLDER" ]; then
-    ln -s "$PROJECTDIR/working/$WORKFOLDER" $WORKFOLDER
+if [ ! -L $HOME/$WORKFOLDER ]; then
+    ln -s $PROJECTDIR/working/$WORKFOLDER $WORKFOLDER
 fi
