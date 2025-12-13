@@ -26,11 +26,11 @@ echo "export LS_COLORS" >> ~/.bashrc
 
 # Make executables in PROJECTDIR/code and PROJECTDIR/opt findable
 if [[ $PATH != *"$PROJECTDIR/code"* ]]; then
-    export PATH=$PROJECTDIR/code:\$PATH" >> ~/.bashrc
+    echo "export PATH=$PROJECTDIR/code:\$PATH" >> ~/.bashrc
 fi
 
 if [[ $PATH != *"$PROJECTDIR/opt"* ]]; then
-    export PATH=$PROJECTDIR/opt:\$PATH" >> ~/.bashrc
+    echo "export PATH=$PROJECTDIR/opt:\$PATH" >> ~/.bashrc
 fi
 
 echo "export PATH=$PROJECTDIR/opt/annovar:\$PATH" >> ~/.bashrc
