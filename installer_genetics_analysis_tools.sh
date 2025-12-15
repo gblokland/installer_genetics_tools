@@ -1,11 +1,10 @@
 #!/bin/bash
 #bin_dir=/ricopili/dependencies/
-#bin_dir=/notebooks/dms-gwas/opt/
-bin_dir=~/persistent/opt/
-
-#cd ~/notebooks/dms-gwas/opt
+bin_dir=/root/persistent/opt/
 cd $bin_dir
 mkdir -p zips
+
+source conda_eigensoft.sh
 
 wget https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20220402.zip
 unzip plink_linux_x86_64_20220402.zip
