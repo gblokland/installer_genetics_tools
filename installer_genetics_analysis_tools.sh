@@ -59,12 +59,13 @@ curl -Lo /tmp/gcta-1.94.1.zip https://yanglab.westlake.edu.cn/software/gcta/bin/
 unzip /tmp/gcta-1.94.1.zip -d $bin_dir && \
 chmod 755 $bin_dir && \
 rm /tmp/gcta-1.94.1.zip 
-    
+
 #curl -Lo /tmp/locuszoom_1.3.tgz https://statgen.sph.umich.edu/locuszoom/download/locuszoom_1.3.tgz && \
 #tar zxvf /tmp/locuszoom_1.3.tgz -C $bin_dir && \
 #chmod 755 $bin_dir && \
 #rm /tmp/locuszoom_1.3.tgz 
-curl -Lo /tmp/locuszoom_1.4.tgz https://statgen.sph.umich.edu/locuszoom/download/locuszoom_1.4.tgz && \
+
+wget --no-check-certificate -O /tmp/locuszoom_1.4.tgz https://statgen.sph.umich.edu/locuszoom/download/locuszoom_1.4.tgz && \
 tar zxvf /tmp/locuszoom_1.4.tgz -C $bin_dir && \
 chmod 755 $bin_dir && \
 rm /tmp/locuszoom_1.4.tgz 
