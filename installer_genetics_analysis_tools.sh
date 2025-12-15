@@ -29,19 +29,17 @@ cd $bin_dir && ln -s bedtools2/bin/bedtools ./bedtools
 #vcftools - Perl and C++
 cd /tmp/ && git clone https://github.com/vcftools/vcftools.git && \
 cd /tmp/vcftools && ./autogen.sh && ./configure && make && make install && \
-cp -r /tmp/vcftools $bin_dir && \
-chmod 755 $bin_dir && \
+#cp -r /tmp/vcftools $bin_dir && \
+#chmod 755 $bin_dir && \
 rm -r /tmp/vcftools && \
-cd $bin_dir && ln -s vcftools/bin/vcftools ./vcftools
-#ln -s /usr/local/bin/vcftools vcftools
+cd $bin_dir && ln -s /usr/local/bin/vcftools ./vcftools
 
 #samtools
 wget https://github.com/samtools/samtools/releases/download/1.21/samtools-1.21.tar.bz2
 tar -xvjf samtools-1.21.tar.bz2
 cd samtools-1.21    # and similarly for bcftools and htslib
 ./configure --prefix=/where/to/install
-make
-make install
+make && make install
 cd $bin_dir && ln -s samtools-1.21/samtools ./samtools
 mv samtools-1.21.tar.bz2 zips/
 
