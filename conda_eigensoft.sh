@@ -1,5 +1,5 @@
 # ----- UPDATE -----
-apt update && sudo apt install -y \
+apt update && apt install -y \
     build-essential wget curl git \
     libblas-dev libopenblas-dev liblapack-dev liblapacke-dev \
     libgsl-dev zlib1g-dev libbz2-dev liblzma-dev \
@@ -29,3 +29,5 @@ cd eigensoft &&
 make && make install
 
 echo "Done! Miniconda, dependencies, EIGENSOFT, and Ricopili prerequisites installed."
+
+ln -s /root/persistent/opt/eigensoft /ricopili/dependencies/eigensoft
