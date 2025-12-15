@@ -1,7 +1,7 @@
 # ----- UPDATE -----
-sudo apt update && sudo apt install -y \
+apt update && sudo apt install -y \
     build-essential wget curl git \
-    libopenblas-dev liblapack-dev liblapacke-dev \
+    libblas-dev libopenblas-dev liblapack-dev liblapacke-dev \
     libgsl-dev zlib1g-dev libbz2-dev liblzma-dev \
     r-base perl cpanminus \
     libssl-dev libxml2-dev libcurl4-openssl-dev \
