@@ -90,7 +90,7 @@ which tabix
 cd $HOME
 
 # Additional symlinks
-for d in code data opt ref_panels sumstats working; do
+for d in code data opt ref_panels results sumstats working; do
     if [ ! -L $HOME/$d ]; then
         ln -s $PROJECTDIR/$d $d
     fi
