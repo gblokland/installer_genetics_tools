@@ -28,14 +28,4 @@ git clone https://github.com/DReichLab/EIG.git eigensoft &&
 cd eigensoft &&
 make && make install
 
-# ----- INSTALL PERL MODULES USED BY RICOPILI -----
-sudo cpanm Statistics::Basic Parallel::ForkManager JSON::PP \
-    File::Copy File::Path FindBin
-
-# ----- INSTALL PLINK -----
-cd /usr/local/bin &&
-sudo wget https://zzz.bwh.harvard.edu/plink/plink-1.9-x86_64.zip &&
-sudo unzip plink-1.9-x86_64.zip &&
-sudo chmod +x plink
-
 echo "Done! Miniconda, dependencies, EIGENSOFT, and Ricopili prerequisites installed."
