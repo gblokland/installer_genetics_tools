@@ -23,7 +23,7 @@ conda activate rp_env
 conda install -y numpy scipy pandas matplotlib
 
 # ----- DOWNLOAD + BUILD EIGENSOFT -----
-cd $HOME &&
+cd /root/persistent/opt &&
 git clone https://github.com/DReichLab/EIG.git eigensoft &&
 cd eigensoft &&
 make && make install
