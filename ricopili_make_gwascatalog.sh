@@ -1,5 +1,5 @@
 #!/bin/bash
-#make_gwascatalog.sh
+#ricopili_make_gwascatalog.sh
 
 set -euo pipefail
 
@@ -14,7 +14,7 @@ unzip gwas-catalog-associations-full.zip
 gunzip gwas-catalog-download-associations-v1.0-full.tsv.gz
 echo "Processing into Ricopili format..."
 
-zcat gwas-catalog-download-associations-v1.0-full.tsv.gz|head
+#zcat gwas-catalog-download-associations-v1.0-full.tsv.gz|head
 #DATE ADDED TO CATALOG   PUBMEDID        FIRST AUTHOR    DATE    JOURNAL LINK    STUDY   DISEASE/TRAIT   INITIAL SAMPLE SIZE     REPLICATION SAMPLE SIZE      REGION  CHR_ID  CHR_POS REPORTED GENE(S)        MAPPED_GENE     UPSTREAM_GENE_ID        DOWNSTREAM_GENE_ID      SNP_GENE_IDS    UPSTREAM_GENE_DISTANCE       DOWNSTREAM_GENE_DISTANCE        STRONGEST SNP-RISK ALLELE       SNPS    MERGED  SNP_ID_CURRENT  CONTEXT INTERGENIC      RISK ALLELE FREQUENCY        P-VALUE PVALUE_MLOG     P-VALUE (TEXT)  OR or BETA      95% CI (TEXT)   PLATFORM [SNPS PASSING QC]      CNV
 
 # Ricopili expects: snp, chr, pos_start, pos_end, pval, tag
@@ -51,7 +51,7 @@ NR>1 {
 }' gwas-catalog-download-associations-v1.0-full.tsv \
 > "$OUT"
 
-gzip -f gwas-catalog-download-associations-v1.0-full.tsv 
+#gzip -f gwas-catalog-download-associations-v1.0-full.tsv 
 
 echo "Created $OUT"
 echo "Done."
