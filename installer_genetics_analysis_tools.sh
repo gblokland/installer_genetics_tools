@@ -4,6 +4,9 @@ bin_dir=/root/persistent/opt/
 cd $bin_dir
 mkdir -p zips
 
+apt-get update && apt-get install -y ca-certificates
+update-ca-certificates
+
 source conda_eigensoft.sh
 
 wget https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20220402.zip
