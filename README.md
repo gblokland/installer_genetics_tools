@@ -1,6 +1,6 @@
 # installer_genetics_tools
 
-Series of scripts to install standard genetic analysis tools in 'opt' directory
+# Series of scripts to install standard genetic analysis tools in 'opt' directory
 
 
 cd ~/code && git clone https://github.com/gblokland/installer_genetics_tools.git
