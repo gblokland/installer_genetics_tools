@@ -7,16 +7,17 @@ mkdir -p zips
 apt-get update && apt-get install -y ca-certificates
 update-ca-certificates
 
+# ***** eigensoft *****
+#bash install_eigensoft.sh /ricopili/dependencies/eigensoft
+
 source conda_eigensoft.sh
 
+#PLINK
 wget https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20220402.zip
 unzip plink_linux_x86_64_20220402.zip
 
 wget https://s3.amazonaws.com/plink2-assets/alpha3/plink2_linux_x86_64_20220603.zip
 unzip plink2_linux_x86_64_20220603.zip
-
-wget https://yanglab.westlake.edu.cn/software/gcta/bin/gcta_v1.94.0Beta_linux_kernel_3_x86_64.zip
-unzip gcta_v1.94.0Beta_linux_kernel_3_x86_64.zip
 
 #Additional genetics tools
 curl -Lo /tmp/bedtools-2.30.0.tgz https://github.com/arq5x/bedtools2/releases/download/v2.30.0/bedtools-2.30.0.tar.gz && \
@@ -53,31 +54,32 @@ make
 mv bcftools bcftools1.21
 cd $bin_dir && ln -s bcftools1.21/bcftools ./bcftools
     
-curl -Lo /tmp/gcta-1.94.1.zip https://yanglab.westlake.edu.cn/software/gcta/bin/gcta-1.94.1-linux-kernel-3-x86_64.zip && \
-unzip /tmp/gcta-1.94.1.zip -d $bin_dir && \
-chmod 755 $bin_dir && \
-rm /tmp/gcta-1.94.1.zip 
+#GCTA
+wget https://yanglab.westlake.edu.cn/software/gcta/bin/gcta-1.95.0-linux-kernel-3-x86_64.zip
+unzip gcta-1.95.0-linux-kernel-3-x86_64.zip
+ln -s gcta-1.95.0-linux-kernel-3-x86_64/gcta64 gcta64
 
 wget --no-check-certificate -O /tmp/locuszoom_1.4.tgz https://statgen.sph.umich.edu/locuszoom/download/locuszoom_1.4.tgz && \
 tar zxvf /tmp/locuszoom_1.4.tgz -C $bin_dir && \
 chmod 755 $bin_dir && \
-rm /tmp/locuszoom_1.4.tgz 
+rm /tmp/locuszoom_1.4.tgz
+ln -s locuszoom/bin/locuszoom locuszoom
     
-curl -Lo /tmp/magma_v1.10.zip https://ctg.cncr.nl/software/MAGMA/prog/magma_v1.10.zip && \
+curl -Lo /tmp/magma_v1.10.zip https://vu.data.surf.nl/public.php/dav/files/zkKbNeNOZAhFXZB/?accept=zip && \
 unzip /tmp/magma_v1.10.zip -d $bin_dir && \
 chmod 755 $bin_dir && \
 rm /tmp/magma_v1.10.zip 
 
 cd $bin_dir && mkdir -p magma_refs && cd magma_refs
-wget https://ctg.cncr.nl/software/MAGMA/aux_files/NCBI38.zip && unzip NCBI38.zip
-wget https://ctg.cncr.nl/software/MAGMA/aux_files/NCBI37.3.zip && unzip NCBI37.3.zip
-wget https://ctg.cncr.nl/software/MAGMA/aux_files/dbsnp151.synonyms.zip && unzip dbsnp151.synonyms.zip
-wget https://ctg.cncr.nl/software/MAGMA/ref_data/g1000_eur.zip && unzip g1000_eur.zip
-wget https://ctg.cncr.nl/software/MAGMA/ref_data/g1000_afr.zip && unzip g1000_afr.zip
-wget https://ctg.cncr.nl/software/MAGMA/ref_data/g1000_eas.zip && unzip g1000_eas.zip
-wget https://ctg.cncr.nl/software/MAGMA/ref_data/g1000_sas.zip && unzip g1000_sas.zip
-wget https://ctg.cncr.nl/software/MAGMA/ref_data/g1000_amr.zip && unzip g1000_amr.zip
-wget https://ctg.cncr.nl/software/MAGMA/ref_data/g1000_subpop.zip && unzip g1000_subpop.zip
+wget -O NCBI38.zip https://vu.data.surf.nl/public.php/dav/files/yj952iHqy5anYhH/?accept=zip && unzip NCBI38.zip
+wget -O NCBI37.3.zip https://vu.data.surf.nl/public.php/dav/files/Pj2orwuF2JYyKxq/?accept=zip && unzip NCBI37.3.zip
+wget -O dbsnp151.synonyms.zip https://vu.data.surf.nl/public.php/dav/files/MSeFJuAVKJ4HLHv/?accept=zip && unzip dbsnp151.synonyms.zip
+wget -O g1000_eur.zip https://vu.data.surf.nl/public.php/dav/files/VZNByNwpD8qqINe/?accept=zip && unzip g1000_eur.zip
+wget -O g1000_afr.zip https://vu.data.surf.nl/public.php/dav/files/ePXET6IWVTwTes4/?accept=zip && unzip g1000_afr.zip
+wget -O g1000_eas.zip https://vu.data.surf.nl/public.php/dav/files/dz6PYdKOi3xVqHn/?accept=zip && unzip g1000_eas.zip
+wget -O g1000_sas.zip https://vu.data.surf.nl/public.php/dav/files/C6UkTV5nuFo8cJC/?accept=zip && unzip g1000_sas.zip
+wget -O g1000_amr.zip https://vu.data.surf.nl/public.php/dav/files/TXDEm70eEO7AgOb/?accept=zip && unzip g1000_amr.zip
+wget -O g1000_subpop.zip https://vu.data.surf.nl/public.php/dav/files/alUE9KnBwCeml2S/?accept=zip && unzip g1000_subpop.zip
 
 curl -Lo /tmp/annovar.tgz http://www.openbioinformatics.org/annovar/download/0wgxR2rIVP/annovar.latest.tar.gz && \
 tar zxvf /tmp/annovar.tgz -C $bin_dir && \
@@ -93,6 +95,8 @@ curl -Lo /tmp/mach_1.0.18.tgz http://csg.sph.umich.edu/abecasis/MaCH/download/ma
 tar zxvf /tmp/mach_1.0.18.tgz -C $bin_dir && \
 chmod 755 $bin_dir && \
 rm /tmp/mach_1.0.18.tgz
+mv exexcutables/* ./
+rm -r executables
 
 #PAINTOR
 cd /tmp/ && git clone https://github.com/gkichaev/PAINTOR_V3.0.git && \
@@ -110,8 +114,9 @@ rm /tmp/finemap_v1.1.tgz && \
 cd $bin_dir && ln -s finemap_v1.1_x86_64/finemap_v1.1_x86_64 ./finemap
 
 #CAVIAR
+apt-get update && apt-get install -y libgsl-dev gsl-bin build-essential
 cd $bin_dir && git clone https://github.com/fhormoz/caviar.git && \
-cd caviar/CAVIAR-C++ && make clean && make && \
+cd caviar/CAVIAR-C++ && make -k clean && make \
 cd $bin_dir && ln -s caviar/CAVIAR-C++/CAVIAR ./CAVIAR
     
 #Boost libraries - prerequisite for MiXeR
@@ -176,43 +181,36 @@ ln -s PRScs/PRScs.py PRScs.py
 
 # ***** #GCTB containing SBayesR, SBayesRC, and SBayesS modules *****
 wget https://cnsgenomics.com/software/gctb/download/gctb_2.05beta_Linux.zip
-unzip gctb_2.05beta_Linux.zip && mv gctb_2.05beta_Linux.zip zips/
+unzip gctb_2.05beta_Linux.zip
 rm -r __MACOSX
 ln -s gctb_2.05beta_Linux/gctb gctb
 unlink gctb
 
 wget https://cnsgenomics.com/software/gctb/download/gctb_2.5.2_Linux.zip
-unzip gctb_2.5.2_Linux.zip && mv gctb_2.5.2_Linux.zip zips/
+unzip gctb_2.5.2_Linux.zip
 rm -r __MACOSX
 ln -s gctb_2.5.2_Linux/gctb gctb
 
-mkdir -p gctb_refs && cd gctb_refs
-
 #Functional genomic annotations:
-#wget https://plot.cnsgenomics.com/SBayesRC/Annotation/annot_baseline2.2.zip
+mkdir -p gctb_refs && cd gctb_refs
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/Annotation/annot_baseline2.2.zip
-unzip annot_baseline2.2.zip && mv annot_baseline2.2.zip zips/ 
+unzip annot_baseline2.2.zip && mv annot_baseline2.2.zip ../zips/ 
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/GWFM/Annotation/annot_baseline2.2_13M.zip
-unzip annot_baseline2.2_13M.zip && mv annot_baseline2.2_13M.zip zips/ 
+unzip annot_baseline2.2_13M.zip && mv annot_baseline2.2_13M.zip ../zips/ 
+mv scratch/project_mnt/S0007/uqywu16/pip2p/ld/ukb13m/annot_bolt_clean.txt ./
+rm -r scratch
 
 #https://github.com/zhilizheng/SBayesRC
 #LD reference: 
 #We provide LD data calculated from different UKB ancestry (EUR, EAS and AFR) in imputed SNPs and HapMap3 SNPs. 
 #We suggest to download imputed LD same ancestry as the GWAS summary data.
-
-mkdir LD_Reference && cd LD_Reference
-###wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbEUR_Imputed.zip
+mkdir -p LD_Reference && cd LD_Reference
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEUR_Imputed.zip && unzip ukbEUR_Imputed.zip
-###wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbEAS_Imputed.zip
-#wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEAS_Imputed.zip && unzip ukbEAS_Imputed.zip
-###wget https://plot.cnsgenomics.com/SBayesRC/LD/Imputed/ukbAFR_Imputed.zip
-#wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbAFR_Imputed.zip && unzip ukbAFR_Imputed.zip
-###wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbEUR_HM3.zip
+wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEAS_Imputed.zip && unzip ukbEAS_Imputed.zip
+wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbAFR_Imputed.zip && unzip ukbAFR_Imputed.zip
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbEUR_HM3.zip && unzip ukbEUR_HM3.zip
-###wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbEAS_HM3.zip
-#wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbEAS_HM3.zip && unzip ukbEAS_HM3.zip
-###wget https://plot.cnsgenomics.com/SBayesRC/LD/HapMap3/ukbAFR_HM3.zip
-#wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbAFR_HM3.zip && unzip ukbAFR_HM3.zip
+wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbEAS_HM3.zip && unzip ukbEAS_HM3.zip
+wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbAFR_HM3.zip && unzip ukbAFR_HM3.zip
 
 # ***** primus *****
 wget https://primus.gs.washington.edu/docroot/versions/PRIMUS_v1.9.0.tgz
@@ -228,9 +226,6 @@ cd fcgene-1.0.7
 mv fcgene_static fcgene 
 # For the dynamic version, run:
 mv fcgene_dynamic fcgene  
-
-# ***** eigensoft *****
-bash install_eigensoft.sh /ricopili/dependencies/eigensoft
 
 cd $bin_dir
 mv *gz zips/
