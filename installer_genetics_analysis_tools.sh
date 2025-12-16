@@ -51,8 +51,8 @@ cd bcftools
  # The following is optional:
  #   autoheader && autoconf && ./configure --enable-libgsl --enable-perl-filters
 make
-mv bcftools bcftools1.21
-cd $bin_dir && ln -s bcftools1.21/bcftools ./bcftools
+mv bcftools bcftools1.22
+cd $bin_dir && ln -s bcftools/bcftools1.22 ./bcftools1.22
     
 #GCTA
 wget https://yanglab.westlake.edu.cn/software/gcta/bin/gcta-1.95.0-linux-kernel-3-x86_64.zip
