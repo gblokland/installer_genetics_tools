@@ -181,11 +181,11 @@ rm -r PRScs_refs
 ln -s PRScs/PRScs.py PRScs.py
 
 # ***** #GCTB containing SBayesR, SBayesRC, and SBayesS modules *****
-wget https://cnsgenomics.com/software/gctb/download/gctb_2.05beta_Linux.zip
-unzip gctb_2.05beta_Linux.zip
-rm -r __MACOSX
-ln -s gctb_2.05beta_Linux/gctb gctb
-unlink gctb
+#wget https://cnsgenomics.com/software/gctb/download/gctb_2.05beta_Linux.zip
+#unzip gctb_2.05beta_Linux.zip
+#rm -r __MACOSX
+#ln -s gctb_2.05beta_Linux/gctb gctb
+#unlink gctb
 
 wget https://cnsgenomics.com/software/gctb/download/gctb_2.5.2_Linux.zip
 unzip gctb_2.5.2_Linux.zip
