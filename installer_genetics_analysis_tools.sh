@@ -58,6 +58,7 @@ cd $bin_dir && ln -s bcftools1.21/bcftools ./bcftools
 wget https://yanglab.westlake.edu.cn/software/gcta/bin/gcta-1.95.0-linux-kernel-3-x86_64.zip
 unzip gcta-1.95.0-linux-kernel-3-x86_64.zip
 ln -s gcta-1.95.0-linux-kernel-3-x86_64/gcta64 gcta64
+rm -r __MACOSX
 
 wget --no-check-certificate -O /tmp/locuszoom_1.4.tgz https://statgen.sph.umich.edu/locuszoom/download/locuszoom_1.4.tgz && \
 tar zxvf /tmp/locuszoom_1.4.tgz -C $bin_dir && \
