@@ -827,16 +827,26 @@ if (runif==TRUE) {
   }
 }
 
-remotes::install_github('tidyverse/googledrive')
-remotes::install_github('tidyverse/googlesheets4')
-remotes::install_github('tidyverse/dplyr')
-remotes::install_github('tidyverse/design')
-remotes::install_github('tidyverse/ggplot2')
-remotes::install_github('tidyverse/dsbox')
-remotes::install_github('tidyverse/tidyr')
-remotes::install_github('tidyverse/dbplyr')
-remotes::install_github('tidyverse/tibble')
-remotes::install_github('tidyverse/readr')
+#remotes::install_github('tidyverse/googledrive')
+#remotes::install_github('tidyverse/googlesheets4')
+#remotes::install_github('tidyverse/dplyr')
+#remotes::install_github('tidyverse/design')
+#remotes::install_github('tidyverse/ggplot2')
+#remotes::install_github('tidyverse/dsbox')
+#remotes::install_github('tidyverse/tidyr')
+#remotes::install_github('tidyverse/dbplyr')
+#remotes::install_github('tidyverse/tibble')
+#remotes::install_github('tidyverse/readr')
+
+#  if (!require("tidyverse", character.only = TRUE, quietly = TRUE)){
+#    if (install_from_cran) {
+#      install.packages("tidyverse", quiet = F)
+#    } else {
+#      system("wget https://cran.rstudio.com/src/contrib/tidyverse_3.4.3.tar.gz")
+#      install.packages("tidyverse_3.4.3.tar.gz", repos=NULL, dependencies = T, quiet = F)
+#    }
+#    suppressMessages(library(sys))
+#  }
 
 if (runif==TRUE) {
   #Skipping 3 packages not available: cpp11, lifecycle, xml2
