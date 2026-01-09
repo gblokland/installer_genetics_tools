@@ -10,7 +10,7 @@ pip3 install --upgrade pip
 pip3 install notebook jupyterlab
 pip3 install --upgrade setuptools
 pip3 install ez_setup
-apt-get install -y python3-scipy python3-numpy python3-h5py
+apt-get install -y python3-scipy python3-numpy python3-h5py pandoc
 
 
 cd /root/persistent/code
