@@ -17,7 +17,7 @@ echo "Using project directory: $PROJECTDIR"
 
 echo "export PATH=/opt:\$PATH" > ~/.bashrc
 echo "export PATH=/opt/generic-ChunkChromosome/ChunkChromosome:\$PATH" >> ~/.bashrc
-echo "export PATH="$HOME/miniconda3/bin:\$PATH" >> ~/.bashrc
+echo "export PATH=$HOME/miniconda3/bin:\$PATH" >> ~/.bashrc
 
 # Colorize ls output
 echo "alias ls='ls -FG --color'" >> ~/.bashrc
