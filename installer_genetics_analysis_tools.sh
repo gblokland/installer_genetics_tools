@@ -157,6 +157,16 @@ cd $bin_dir && git clone https://github.com/precimed/ukb.git
 
 #python_convert tools from precimed
 cd $bin_dir && git clone https://github.com/precimed/python_convert.git
+cd python_convert/
+chmod +x *.py
+wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/2558411_ref.bim
+wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/9279485_ref.bim
+wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_RsMergeArch.bcp.gz
+wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_SNPChrPosOnRef_105.bcp.gz
+wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_SNPHistory.bcp.gz
+wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/hg18ToHg19.over.chain.gz
+wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/ref_1kG_phase3_EUR.tar.gz
+tar xzf ref_1kG_phase3_EUR.tar.gz
 
 #Make python findable
 cd $bin_dir && ln -s /usr/bin/python3 python
