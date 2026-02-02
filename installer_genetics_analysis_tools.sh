@@ -156,7 +156,7 @@ cd $bin_dir
 cd $bin_dir && git clone https://github.com/precimed/ukb.git
 
 #python_convert tools from precimed
-cd $bin_dir && wget https://github.com/precimed/python_convert.git
+cd $bin_dir && git clone https://github.com/precimed/python_convert.git
 
 #Make python findable
 cd $bin_dir && ln -s /usr/bin/python3 python
