@@ -52,15 +52,26 @@ make && make install
 cd $bin_dir && ln -s samtools-1.21/samtools ./samtools
 mv samtools-1.21.tar.bz2 zips/
 
+#tabix
+cd $bin_dir
+#git clone --recurse-submodules https://github.com/samtools/htslib.git
+wget https://github.com/samtools/htslib/releases/download/1.23/htslib-1.23.tar.bz2
+tar -xvjf htslib-1.23.tar.bz2
+cd htslib-1.23
+./configure --prefix=/where/to/install
+make && make install
+cd $bin_dir && ln -s htslib-1.23/tabix ./tabix
+mv htslib-1.23.tar.bz2 zips/
+
 #bcftools
-git clone --recurse-submodules https://github.com/samtools/htslib.git
-git clone https://github.com/samtools/bcftools.git
-cd bcftools
- # The following is optional:
- #   autoheader && autoconf && ./configure --enable-libgsl --enable-perl-filters
-make
-mv bcftools bcftools1.22
-cd $bin_dir && ln -s bcftools/bcftools1.22 ./bcftools1.22
+cd $bin_dir
+#git clone https://github.com/samtools/bcftools.git
+wget https://github.com/samtools/bcftools/releases/download/1.23/bcftools-1.23.tar.bz2
+tar -xvjf bcftools-1.23.tar.bz2
+cd bcftools-1.23
+./configure --prefix=/where/to/install
+make && make install
+cd $bin_dir && ln -s bcftools-1.23/bcftools ./bcftools
     
 #GCTA
 wget https://yanglab.westlake.edu.cn/software/gcta/bin/gcta-1.95.0-linux-kernel-3-x86_64.zip
@@ -68,12 +79,14 @@ unzip gcta-1.95.0-linux-kernel-3-x86_64.zip
 ln -s gcta-1.95.0-linux-kernel-3-x86_64/gcta64 gcta64
 rm -r __MACOSX
 
+#LocusZoom
 wget --no-check-certificate -O /tmp/locuszoom_1.4.tgz https://statgen.sph.umich.edu/locuszoom/download/locuszoom_1.4.tgz && \
 tar zxvf /tmp/locuszoom_1.4.tgz -C $bin_dir && \
 chmod 755 $bin_dir && \
 rm /tmp/locuszoom_1.4.tgz
 ln -s locuszoom/bin/locuszoom locuszoom
-    
+
+#MAGMA
 curl -Lo /tmp/magma_v1.10.zip https://vu.data.surf.nl/public.php/dav/files/zkKbNeNOZAhFXZB/?accept=zip && \
 unzip /tmp/magma_v1.10.zip -d $bin_dir && \
 chmod 755 $bin_dir && \
