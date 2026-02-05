@@ -28,12 +28,16 @@ unzip plink2_linux_amd_avx2_20260110.zip
 #Additional genetics tools
 
 #bedtools
-curl -Lo /tmp/bedtools-2.30.0.tgz https://github.com/arq5x/bedtools2/releases/download/v2.30.0/bedtools-2.30.0.tar.gz && \
-tar zxvf /tmp/bedtools-2.30.0.tgz -C $bin_dir && \
-cd $bin_dir/bedtools2 && make && make install && \
-chmod 755 $bin_dir && \
-rm /tmp/bedtools-2.30.0.tgz && \
-cd $bin_dir && ln -s bedtools2/bin/bedtools ./bedtools
+#curl -Lo /tmp/bedtools-v2.29.1.tgz https://github.com/arq5x/bedtools2/releases/download/v2.29.1/bedtools-v2.29.1.tar.gz && \
+#tar zxvf /tmp/bedtools-v2.29.1.tgz -C $bin_dir && \
+#cd $bin_dir/bedtools2 && make && make install && \
+#chmod 755 $bin_dir && \
+#rm /tmp/bedtools-2.30.0.tgz && \
+#cd $bin_dir && ln -s bedtools2/bin/bedtools ./bedtools
+
+#bedtools
+apt-get install bedtools
+cp /usr/bin/bedtools ./
     
 #vcftools - Perl and C++
 cd /tmp/ && git clone https://github.com/vcftools/vcftools.git && \
