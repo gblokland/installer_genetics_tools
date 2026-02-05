@@ -26,6 +26,8 @@ wget https://s3.amazonaws.com/plink2-assets/alpha6/plink2_linux_amd_avx2_2026011
 unzip plink2_linux_amd_avx2_20260110.zip
 
 #Additional genetics tools
+
+#bedtools
 curl -Lo /tmp/bedtools-2.30.0.tgz https://github.com/arq5x/bedtools2/releases/download/v2.30.0/bedtools-2.30.0.tar.gz && \
 tar zxvf /tmp/bedtools-2.30.0.tgz -C $bin_dir && \
 cd $bin_dir/bedtools2 && make && make install && \
