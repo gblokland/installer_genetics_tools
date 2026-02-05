@@ -16,8 +16,14 @@ source conda_eigensoft.sh
 wget https://s3.amazonaws.com/plink1-assets/plink_linux_x86_64_20220402.zip
 unzip plink_linux_x86_64_20220402.zip
 
-wget https://s3.amazonaws.com/plink2-assets/alpha3/plink2_linux_x86_64_20220603.zip
-unzip plink2_linux_x86_64_20220603.zip
+#Check appropriate program file for operating system:
+uname -m
+lscpu | grep avx2
+lscpu | grep "Vendor ID"
+#wget https://s3.amazonaws.com/plink2-assets/plink2_linux_x86_64_20260110.zip
+#unzip plink2_linux_x86_64_20220603.zip
+wget https://s3.amazonaws.com/plink2-assets/alpha6/plink2_linux_amd_avx2_20260110.zip
+unzip plink2_linux_amd_avx2_20260110.zip
 
 #Additional genetics tools
 curl -Lo /tmp/bedtools-2.30.0.tgz https://github.com/arq5x/bedtools2/releases/download/v2.30.0/bedtools-2.30.0.tar.gz && \
