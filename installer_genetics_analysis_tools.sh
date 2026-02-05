@@ -178,11 +178,11 @@ tar xzf ref_1kG_phase3_EUR.tar.gz
 cd $bin_dir && ln -s /usr/bin/python3 python
 
 #LDpred2 (R package)
-mkdir -p ldpred_refs && cd ldpred_refs
+cd $bin_dir && mkdir -p ldpred_refs && cd ldpred_refs
 #N/A
 
 #LAVA (R package)
-mkdir -p lava_refs && cd lava_refs
+cd $bin_dir && mkdir -p lava_refs && cd lava_refs
 wget https://vu.data.surfsara.nl/index.php/s/VZNByNwpD8qqINe/download && mv download g1000_eur.zip && unzip g1000_eur.zip
 wget https://vu.data.surfsara.nl/index.php/s/ePXET6IWVTwTes4/download && mv download g1000_afr.zip
 wget https://vu.data.surfsara.nl/index.php/s/dz6PYdKOi3xVqHn/download && mv download g1000_eas.zip
@@ -190,7 +190,7 @@ wget https://vu.data.surfsara.nl/index.php/s/C6UkTV5nuFo8cJC/download && mv down
 wget https://vu.data.surfsara.nl/index.php/s/TXDEm70eEO7AgOb/download && mv download g1000_amr.zip
 
 # ***** PRScs *****
-apt-get update && apt-get install -y git wget
+cd $bin_dir && apt-get update && apt-get install -y git wget
 git clone https://github.com/getian107/PRScs.git
 wget -r -np -R "index.html*" https://personal.broadinstitute.org/hhuang/public/PRS-CSx/Reference/1KG/
 wget -r -np -R "index.html*" https://personal.broadinstitute.org/hhuang/public/PRS-CSx/Reference/UKBB/
@@ -200,19 +200,19 @@ rm -r PRScs_refs
 ln -s PRScs/PRScs.py PRScs.py
 
 # ***** #GCTB containing SBayesR, SBayesRC, and SBayesS modules *****
-#wget https://cnsgenomics.com/software/gctb/download/gctb_2.05beta_Linux.zip
+#cd $bin_dir && wget https://cnsgenomics.com/software/gctb/download/gctb_2.05beta_Linux.zip
 #unzip gctb_2.05beta_Linux.zip
 #rm -r __MACOSX
 #ln -s gctb_2.05beta_Linux/gctb gctb
 #unlink gctb
 
-wget https://cnsgenomics.com/software/gctb/download/gctb_2.5.2_Linux.zip
+cd $bin_dir && wget https://cnsgenomics.com/software/gctb/download/gctb_2.5.2_Linux.zip
 unzip gctb_2.5.2_Linux.zip
 rm -r __MACOSX
 ln -s gctb_2.5.2_Linux/gctb gctb
 
 #Functional genomic annotations:
-mkdir -p gctb_refs && cd gctb_refs
+cd $bin_dir && mkdir -p gctb_refs && cd gctb_refs
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/Annotation/annot_baseline2.2.zip
 unzip annot_baseline2.2.zip && mv annot_baseline2.2.zip ../zips/ 
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/GWFM/Annotation/annot_baseline2.2_13M.zip
@@ -224,7 +224,7 @@ rm -r scratch
 #LD reference: 
 #We provide LD data calculated from different UKB ancestry (EUR, EAS and AFR) in imputed SNPs and HapMap3 SNPs. 
 #We suggest to download imputed LD same ancestry as the GWAS summary data.
-mkdir -p LD_Reference && cd LD_Reference
+cd $bin_dir && mkdir -p LD_Reference && cd LD_Reference
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEUR_Imputed.zip && unzip ukbEUR_Imputed.zip
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbEAS_Imputed.zip && unzip ukbEAS_Imputed.zip
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/Imputed/ukbAFR_Imputed.zip && unzip ukbAFR_Imputed.zip
@@ -233,12 +233,12 @@ wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbEAS
 wget https://gctbhub.cloud.edu.au/data/SBayesRC/resources/v2.0/LD/HapMap3/ukbAFR_HM3.zip && unzip ukbAFR_HM3.zip
 
 # ***** primus *****
-wget https://primus.gs.washington.edu/docroot/versions/PRIMUS_v1.9.0.tgz
+cd $bin_dir && wget https://primus.gs.washington.edu/docroot/versions/PRIMUS_v1.9.0.tgz
 tar xzf PRIMUS_v1.9.0.tgz
 
 # ***** fcgene *****
 #https://sourceforge.net/projects/fcgene/files/latest/download
-wget http://sourceforge.net/projects/fcgene/files/fcgene-1.0.7.tar.gz/download
+cd $bin_dir && wget http://sourceforge.net/projects/fcgene/files/fcgene-1.0.7.tar.gz/download
 mv download fcgene-1.0.7.tar.gz
 tar -zxvf fcgene-1.0.7.tar.gz
 cd fcgene-1.0.7
