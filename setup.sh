@@ -38,7 +38,10 @@ echo "export PATH=$PROJECTDIR/opt/liftOverPlink:\$PATH" >> ~/.bashrc
 echo "export PATH=$PROJECTDIR/opt/locuszoom/bin:\$PATH" >> ~/.bashrc
 
 # Add Ricopili tools
+echo "if [ ! -L /ricopili/dependencies/Minimac3 ]; then" >> ~/.bashrc
 echo "ln -s /ricopili/dependencies/ricopili_dependencies_0225b/* /ricopili/dependencies/" >> ~/.bashrc
+echo "fi" >> ~/.bashrc
+
 echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac3:\$PATH" >> ~/.bashrc
 echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/Minimac4/minimac4-4.1.2-Linux-x86_64/bin:\$PATH" >> ~/.bashrc
 echo "export PATH=/ricopili/dependencies/ricopili_dependencies_0225b/bcftools/bcftools-1.9_bin:\$PATH" >> ~/.bashrc
