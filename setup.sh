@@ -91,7 +91,14 @@ which tabix
 cd $HOME
 
 # Additional symlinks
-for d in code data opt ref_panels results sumstats working; do
+for d in code data opt ref_panels results sumstats cd $HOME
+
+# Additional symlinks
+for d in code data opt ref_panels results sumstats sumstats_harmonized working; do
+    if [ ! -L $HOME/$d ]; then
+        ln -s $PROJECTDIR/$d $d
+    fi
+doneworking; do
     if [ ! -L $HOME/$d ]; then
         ln -s $PROJECTDIR/$d $d
     fi
